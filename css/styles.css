@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center; /* Center-aligns all text within the body */
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0; /* Remove any default margin */
+}
+
+header h1 a {
+    text-decoration: none;
+    color: #333;
+    font-size: 2em;
+}
+
+header h1 a:hover {
+    color: #555;
+}
+
+/* Remove any list-style if using unordered lists elsewhere */
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.home-content a {
+    display: block; /* Makes each link take up a full line */
+    text-decoration: none;
+    color: #333; /* Link color */
+    font-size: 1.5em; /* Font size of the links */
+    margin: 10px 0; /* Space between links */
+}
+
+.home-content a:hover {
+    color: #555; /* Link color on hover */
+}
+
+/* Ensure slider container is centered and has a max width */
+.slider {
+    position: relative;
+    max-width: 900px; /* Adjust the maximum width as needed */
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Hide all slides by default */
+.slide {
+    display: none;
+    position: relative;
+}
+
+/* Make images responsive within the slider */
+.slide img {
+    width: 100%; /* Ensure images take up full width of the slider */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Style for captions */
+.caption {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    color: white; /* Text color */
+    font-size: 0.9em; /* Font size of the caption */
+}
+
+/* Navigation buttons */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px; /* Half of the button height to center vertically */
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
