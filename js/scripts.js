@@ -13,11 +13,25 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlide(currentIndex);
     }
 
+    function previousSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+    }
+
     // Initialize the slider
     showSlide(currentIndex);
 
-    // Optionally, you can add the function to the click events
+    // Add click event listeners to slides
     slides.forEach(slide => {
         slide.addEventListener('click', nextSlide);
+    });
+
+    // Add keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowRight') {
+            nextSlide();
+        } else if (e.key === 'ArrowLeft') {
+            previousSlide();
+        }
     });
 });
