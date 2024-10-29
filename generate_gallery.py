@@ -8,7 +8,7 @@ def generate_html():
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Picture Group 1</title>
+    <title>Picture Group 6</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -18,10 +18,10 @@ def generate_html():
     </header>
 
     <!-- Title for the specific picture group -->
-    <h2>10/9/2024</h2>
+    <h2>10/28/2024</h2>
 
     <!-- Film information -->
-    <p>Kodak Gold 200 Color Negative Film (35mm)</p>
+    <p>Kodak UltraMax 400 Color Negative Film (35mm)</p>
 
     <!-- Camera information -->
     <p>Olympus Stylus Epic Zoom 170</p>  
@@ -35,14 +35,14 @@ def generate_html():
 """
 
     # Get all jpg files in the images/group5 directory
-    image_files = [f for f in os.listdir("images/group5") if f.lower().endswith(".jpg")]
+    image_files = [f for f in os.listdir("images/group6") if f.lower().endswith(".jpg")]
 
     # Generate HTML for each image
     for image_file in image_files:
         file_name = os.path.splitext(image_file)[0]  # Remove the .jpg extension
         html += f"""    <div class="slider">
         <div class="slide" onclick="nextSlide()">
-            <img src="images/group5/{image_file}" alt="{file_name}">
+            <img src="images/group6/{image_file}" alt="{file_name}">
             <p class="caption">{file_name}</p>
         </div>
     </div>
