@@ -1,7 +1,14 @@
 import os
 
+# Update
+# - Title for picture group (update text in function)
+# - Film information (update text in function)
+# - Group directory (set below variable)
 
-def generate_html():
+GROUP = "group7"
+
+
+def generate_html(group):
     # HTML header
     html = """<!DOCTYPE html>
 <html lang="en">
@@ -18,7 +25,7 @@ def generate_html():
     </header>
 
     <!-- Title for the specific picture group -->
-    <h2>10/28/2024</h2>
+    <h2>12/16/2024</h2>
 
     <!-- Film information -->
     <p>Kodak UltraMax 400 Color Negative Film (35mm)</p>
@@ -34,15 +41,17 @@ def generate_html():
     <!-- Slider for images -->
 """
 
-    # Get all jpg files in the images/group5 directory
-    image_files = [f for f in os.listdir("images/group6") if f.lower().endswith(".jpg")]
+    # Get all jpg files in the correct images/group* directory
+    image_files = [
+        f for f in os.listdir(f"images/{group}") if f.lower().endswith(".jpg")
+    ]
 
     # Generate HTML for each image
     for image_file in image_files:
         file_name = os.path.splitext(image_file)[0]  # Remove the .jpg extension
         html += f"""    <div class="slider">
         <div class="slide" onclick="nextSlide()">
-            <img src="images/group6/{image_file}" alt="{file_name}">
+            <img src="images/{group}/{image_file}" alt="{file_name}">
             <p class="caption">{file_name}</p>
         </div>
     </div>
@@ -56,9 +65,9 @@ def generate_html():
 """
 
     # Write the HTML to a file
-    with open("photo_gallery.html", "w") as f:
+    with open(f"{group}.html", "w") as f:
         f.write(html)
 
 
 # Run the function to generate the HTML
-generate_html()
+generate_html(GROUP)
