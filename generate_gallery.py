@@ -10,12 +10,12 @@ GROUP = "group7"
 
 def generate_html(group):
     # HTML header
-    html = """<!DOCTYPE html>
+    html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Picture Group 6</title>
+    <title>Picture Group {group[-1]}</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
