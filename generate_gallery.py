@@ -5,7 +5,7 @@ import os
 # - Film information (update text in function)
 # - Group directory (set below variable)
 
-GROUP = "group8"
+GROUP = "group9"
 
 
 def generate_html(group):
@@ -25,10 +25,10 @@ def generate_html(group):
     </header>
 
     <!-- Title for the specific picture group -->
-    <h2>1/15/2024</h2>
+    <h2>1/22/2024</h2>
 
     <!-- Film information -->
-    <p>Kodak UltraMax 400 Color Negative Film (35mm)</p>
+    <p>Ilford XP2 Super 400 Black & White Film (35mm)</p>
 
     <!-- Camera information -->
     <p>Canon AE-1 Program</p>  
