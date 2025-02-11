@@ -68,6 +68,22 @@
             padding-top: 20px;
             border-top: 1px solid #eee;
         }
+
+        .counter-button {
+            display: block;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 40px auto;
+            background: #f8f8f8;
+            border: none;
+            border-radius: 8px;
+            transition: background-color 0.2s;
+        }
+
+        .counter-button:hover {
+            background: #eee;
+        }
     </style>
 </head>
 <body>
@@ -94,11 +110,26 @@
             <a href="cat.html" class="collection-link">Cat Photography</a>
         </div>
 
+        <div style="text-align: center;">
+            <p>Please support ajoherron photography by pressing this button<br>(every press helps)</p>
+            <button onclick="animateButton(this)" style="font-size: 1.5em; padding: 10px 20px; margin: 10px; cursor: pointer;">
+                Support
+            </button>
+        </div>
+        
+        <script>
+            function animateButton(button) {
+                button.style.transform = 'scale(1.2)';
+                setTimeout(() => button.style.transform = 'scale(1)', 200);
+            }
+        </script>
+
         <img 
             src="images/group11/cradle.jpg" 
             alt="cradle" 
             class="featured-image"
         >
     </main>
+
 </body>
 </html>
