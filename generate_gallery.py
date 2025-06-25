@@ -16,12 +16,12 @@ def generate_html(gallery, date, film, camera):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Picture Gallery {gallery[-2:]}</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <!-- Header with clickable title -->
     <header>
-        <h1><a href="index.html">ajoherron photography</a></h1>
+        <h1><a href="../index.html">ajoherron photography</a></h1>
     </header>
 
     <!-- Title for the specific picture gallery -->
@@ -51,7 +51,7 @@ def generate_html(gallery, date, film, camera):
         file_name = os.path.splitext(image_file)[0]  # Remove the .jpg extension
         html += f"""    <div class="slider">
         <div class="slide" onclick="nextSlide()">
-            <img src="images/{gallery}/{image_file}" alt="{file_name}">
+            <img src="../images/{gallery}/{image_file}" alt="{file_name}">
             <p class="caption">{file_name}</p>
         </div>
     </div>
@@ -59,13 +59,13 @@ def generate_html(gallery, date, film, camera):
 
     # Close the HTML
     html += """
-    <script src="js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
 </body>
 </html>
 """
 
     # Write the HTML to a file
-    with open(f"{gallery}.html", "w") as f:
+    with open(f"galleries/{gallery}.html", "w") as f:
         f.write(html)
 
 
