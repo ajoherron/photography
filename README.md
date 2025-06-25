@@ -17,4 +17,8 @@
 
 - Including gallery, date, film, and camera
 
-4. Push changes
+4. Run generate_random_image_js.py
+
+- This will run generate_random_image_js.py, which will update the random image list
+
+5. Push changes

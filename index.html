@@ -84,6 +84,34 @@
         .counter-button:hover {
             background: #eee;
         }
+
+        .random-button, .support-button {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.5em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            margin: 10px;
+        }
+
+        .random-button:hover, .support-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        }
+
+        .random-image {
+            max-width: 1000px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
@@ -116,9 +144,26 @@
             <a href="gallery_cat.html" class="collection-link">Cat Photography</a>
         </div>
 
+        <div style="text-align: center; margin: 40px 0;">
+            <p>Explore photos at random!<br>(every click shows something new)</p>
+            <button onclick="showRandomImage()" class="random-button">
+                Random Image Generator
+            </button>
+            
+            <div class="random-image-container" id="randomImageContainer" style="display: none; margin-top: 20px;">
+                <img id="randomImage" class="random-image" src="" alt="">
+                <div id="imageInfo" style="margin: 10px 0; color: #666; font-size: 14px;"></div>
+                <div>
+                    <a id="galleryLink" href="" style="color: #333; text-decoration: none;">
+                        View Full Gallery →
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <div style="text-align: center;">
             <p>Please support ajoherron photography by pressing this button<br>(every press helps)</p>
-            <button onclick="animateButton(this)" style="font-size: 1.5em; padding: 10px 20px; margin: 10px; cursor: pointer;">
+            <button onclick="animateButton(this)" class="support-button">
                 Support
             </button>
         </div>
@@ -137,5 +182,6 @@
         >
     </main>
 
+    <script src="js/random-images.js"></script>
 </body>
 </html>
