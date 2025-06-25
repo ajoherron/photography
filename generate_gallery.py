@@ -1,14 +1,14 @@
 import os
 
-# Update
-# - Title for picture group (update text in function)
-# - Film information (update text in function)
-# - Group directory (set below variable)
+##############
+### Update ###
+##############
+GROUP = "group17" # E.g., group15
+DATE = "6/25/2025" # E.g., 4/27/2025
+FILM = "Kodak Portra 400 (35mm)" # E.g., Kodak UltraMax 400 (35mm)
+CAMERA = "Olympus Stylus Epic Zoom 170" # E.g., Canon AE-1 Program or Olympus Stylus Epic Zoom 170
 
-GROUP = "group15"
-
-
-def generate_html(group):
+def generate_html(group, date, film, camera):
     # HTML header
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -25,13 +25,13 @@ def generate_html(group):
     </header>
 
     <!-- Title for the specific picture group -->
-    <h2>4/27/2024</h2>
+    <h2>{date}</h2>
 
     <!-- Film information -->
-    <p>Kodak UltraMax 400 (35mm)</p>
+    <p>{film}</p>
 
     <!-- Camera information -->
-    <p>Canon AE-1 Program</p>  
+    <p>{camera}</p>  
     
     <!-- Instructions -->
     <p style="color: #666; font-size: 0.8em; font-weight: normal; margin-top: 10px;">
@@ -70,4 +70,4 @@ def generate_html(group):
 
 
 # Run the function to generate the HTML
-generate_html(GROUP)
+generate_html(GROUP, DATE, FILM, CAMERA)
