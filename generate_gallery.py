@@ -3,19 +3,19 @@ import os
 ##############
 ### Update ###
 ##############
-GROUP = "group17" # E.g., group15
+GALLERY = "gallery17" # E.g., gallery15
 DATE = "6/25/2025" # E.g., 4/27/2025
 FILM = "Kodak Portra 400 (35mm)" # E.g., Kodak UltraMax 400 (35mm)
 CAMERA = "Olympus Stylus Epic Zoom 170" # E.g., Canon AE-1 Program or Olympus Stylus Epic Zoom 170
 
-def generate_html(group, date, film, camera):
+def generate_html(gallery, date, film, camera):
     # HTML header
     html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Picture Group {group[-2:]}</title>
+    <title>Picture Gallery {gallery[-2:]}</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -24,7 +24,7 @@ def generate_html(group, date, film, camera):
         <h1><a href="index.html">ajoherron photography</a></h1>
     </header>
 
-    <!-- Title for the specific picture group -->
+    <!-- Title for the specific picture gallery -->
     <h2>{date}</h2>
 
     <!-- Film information -->
@@ -41,9 +41,9 @@ def generate_html(group, date, film, camera):
     <!-- Slider for images -->
 """
 
-    # Get all jpg files in the correct images/group* directory
+    # Get all jpg files in the correct images/gallery* directory
     image_files = [
-        f for f in os.listdir(f"images/{group}") if f.lower().endswith(".jpg")
+        f for f in os.listdir(f"images/{gallery}") if f.lower().endswith(".jpg")
     ]
 
     # Generate HTML for each image
@@ -51,7 +51,7 @@ def generate_html(group, date, film, camera):
         file_name = os.path.splitext(image_file)[0]  # Remove the .jpg extension
         html += f"""    <div class="slider">
         <div class="slide" onclick="nextSlide()">
-            <img src="images/{group}/{image_file}" alt="{file_name}">
+            <img src="images/{gallery}/{image_file}" alt="{file_name}">
             <p class="caption">{file_name}</p>
         </div>
     </div>
@@ -65,9 +65,9 @@ def generate_html(group, date, film, camera):
 """
 
     # Write the HTML to a file
-    with open(f"{group}.html", "w") as f:
+    with open(f"{gallery}.html", "w") as f:
         f.write(html)
 
 
 # Run the function to generate the HTML
-generate_html(GROUP, DATE, FILM, CAMERA)
+generate_html(GALLERY, DATE, FILM, CAMERA)

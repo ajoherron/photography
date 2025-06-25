@@ -11,10 +11,10 @@
 
 2. Create new folder in images/
 
-- Should follow group<#> format
+- Should follow gallery<#> format
 
 3. Update inputs for generate_gallery.py (then run script)
 
-- Including group, date, film, and camera
+- Including gallery, date, film, and camera
 
 4. Push changes
