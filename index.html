@@ -35,11 +35,139 @@
             color: #666;
         }
 
-        .collections {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+        .gallery-table {
+            width: 100%;
+            border-collapse: collapse;
             margin-bottom: 40px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .gallery-table th {
+            background: #f8f8f8;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #eee;
+        }
+
+        .gallery-table td {
+            padding: 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .gallery-table tr:hover {
+            background: #f9f9f9;
+        }
+
+        .gallery-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Camera color coding */
+        .canon-ae-1 {
+            border-left: 4px solid #4A90E2;
+            background: rgba(74, 144, 226, 0.05);
+        }
+
+        .canon-ae-1:hover {
+            background: rgba(74, 144, 226, 0.1);
+        }
+
+        .olympus-stylus-epic-zoom-170 {
+            border-left: 4px solid #7ED321;
+            background: rgba(126, 211, 33, 0.05);
+        }
+
+        .olympus-stylus-epic-zoom-170:hover {
+            background: rgba(126, 211, 33, 0.1);
+        }
+
+        .all {
+            border-left: 4px solid #F5A623;
+            background: rgba(245, 166, 35, 0.05);
+        }
+
+        .all:hover {
+            background: rgba(245, 166, 35, 0.1);
+        }
+
+        /* Camera key styling */
+        .camera-key {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+
+        .camera-key h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .key-items {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .key-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .key-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+        }
+
+        .canon-ae-1-key {
+            background: #4A90E2;
+        }
+
+        .olympus-stylus-epic-zoom-170-key {
+            background: #7ED321;
+        }
+
+        .all-key {
+            background: #F5A623;
+        }
+
+        .gallery-name {
+            font-weight: 500;
+        }
+
+        .gallery-name a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .gallery-name a:hover {
+            color: #667eea;
+        }
+
+        .gallery-date {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .gallery-description {
+            color: #777;
+            font-size: 0.95em;
+        }
+
+        .special-categories {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
         }
 
         .collection-link {
@@ -61,12 +189,6 @@
             height: auto;
             border-radius: 4px;
             margin-top: 40px;
-        }
-
-        .special-categories {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
         }
 
         .counter-button {
@@ -112,6 +234,18 @@
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
+
+        /* Responsive design for mobile */
+        @media (max-width: 768px) {
+            .gallery-table {
+                font-size: 0.9em;
+            }
+            
+            .gallery-table th,
+            .gallery-table td {
+                padding: 10px 8px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -120,29 +254,125 @@
     </header>
 
     <main>
-        <div class="collections">
-            <a href="galleries/gallery17.html" class="collection-link">June 25 #2, 2025</a>
-            <a href="galleries/gallery16.html" class="collection-link">June 25 #1, 2025</a>
-            <a href="galleries/gallery15.html" class="collection-link">April 27, 2025</a>
-            <a href="galleries/gallery14.html" class="collection-link">March 12, 2025</a>
-            <a href="galleries/gallery13.html" class="collection-link">February 18 #2, 2025</a>
-            <a href="galleries/gallery12.html" class="collection-link">February 18 #1, 2025</a>
-            <a href="galleries/gallery11.html" class="collection-link">February 10, 2025</a>
-            <a href="galleries/gallery10.html" class="collection-link">February 3, 2025</a>
-            <a href="galleries/gallery9.html" class="collection-link">January 22, 2025</a>
-            <a href="galleries/gallery8.html" class="collection-link">January 15, 2025</a>
-            <a href="galleries/gallery7.html" class="collection-link">December 16, 2024</a>
-            <a href="galleries/gallery6.html" class="collection-link">October 28, 2024</a>
-            <a href="galleries/gallery5.html" class="collection-link">October 9, 2024</a>
-            <a href="galleries/gallery4.html" class="collection-link">September 20, 2024</a>
-            <a href="galleries/gallery3.html" class="collection-link">September 4, 2024</a>
-            <a href="galleries/gallery2.html" class="collection-link">August 18, 2024</a>
-            <a href="galleries/gallery1.html" class="collection-link">August 6, 2024</a>
+        <div class="camera-key">
+            <h3>Camera Key</h3>
+            <div class="key-items">
+                <div class="key-item">
+                    <div class="key-color canon-ae-1-key"></div>
+                    <span>Canon AE-1</span>
+                </div>
+                <div class="key-item">
+                    <div class="key-color olympus-stylus-epic-zoom-170-key"></div>
+                    <span>Olympus Stylus Epic Zoom 170</span>
+                </div>
+                <div class="key-item">
+                    <div class="key-color all-key"></div>
+                    <span>Both Cameras</span>
+                </div>
+            </div>
         </div>
 
-        <div class="special-categories">
-            <a href="galleries/gallery_cat.html" class="collection-link">Cat Photography</a>
-        </div>
+        <table class="gallery-table">
+            <thead>
+                <tr>
+                    <th>Gallery Name</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="olympus-stylus-epic-zoom-170">
+                    <td class="gallery-name"><a href="galleries/gallery17.html">Summer Session #2</a></td>
+                    <td class="gallery-date">June 25, 2025</td>
+                    <td class="gallery-description">Latest summer photography collection</td>
+                </tr>
+                <tr class="canon-ae-1">
+                    <td class="gallery-name"><a href="galleries/gallery16.html">Summer Session #1</a></td>
+                    <td class="gallery-date">June 25, 2025</td>
+                    <td class="gallery-description">First set from summer photography session</td>
+                </tr>
+                <tr class="canon-ae-1">
+                    <td class="gallery-name"><a href="galleries/gallery15.html">Spring Collection</a></td>
+                    <td class="gallery-date">April 27, 2025</td>
+                    <td class="gallery-description">Capturing the beauty of spring</td>
+                </tr>
+                <tr class="canon-ae-1">
+                    <td class="gallery-name"><a href="galleries/gallery14.html">March Moments</a></td>
+                    <td class="gallery-date">March 12, 2025</td>
+                    <td class="gallery-description">Mid-spring photography exploration</td>
+                </tr>
+                <tr class="canon-ae-1">
+                    <td class="gallery-name"><a href="galleries/gallery13.html">February Session #2</a></td>
+                    <td class="gallery-date">February 18, 2025</td>
+                    <td class="gallery-description">Second February photography set</td>
+                </tr>
+                <tr class="olympus-stylus-epic-zoom-170">
+                    <td class="gallery-name"><a href="galleries/gallery12.html">February Session #1</a></td>
+                    <td class="gallery-date">February 18, 2025</td>
+                    <td class="gallery-description">First February photography collection</td>
+                </tr>
+                <tr class="canon-ae-1">
+                    <td class="gallery-name"><a href="galleries/gallery11.html">Winter Scenes</a></td>
+                    <td class="gallery-date">February 10, 2025</td>
+                    <td class="gallery-description">Winter landscape and portrait photography</td>
+                </tr>
+                <tr class="canon-ae-1">
+                    <td class="gallery-name"><a href="galleries/gallery10.html">Early February</a></td>
+                    <td class="gallery-date">February 3, 2025</td>
+                    <td class="gallery-description">Beginning of February photo series</td>
+                </tr>
+                <tr class="canon-ae-1">
+                    <td class="gallery-name"><a href="galleries/gallery9.html">January Collection</a></td>
+                    <td class="gallery-date">January 22, 2025</td>
+                    <td class="gallery-description">Late January photography session</td>
+                </tr>
+                <tr class="canon-ae-1">
+                    <td class="gallery-name"><a href="galleries/gallery8.html">New Year Session</a></td>
+                    <td class="gallery-date">January 15, 2025</td>
+                    <td class="gallery-description">First photography session of the new year</td>
+                </tr>
+                <tr class="olympus-stylus-epic-zoom-170">
+                    <td class="gallery-name"><a href="galleries/gallery7.html">Holiday Collection</a></td>
+                    <td class="gallery-date">December 16, 2024</td>
+                    <td class="gallery-description">Holiday season photography</td>
+                </tr>
+                <tr class="olympus-stylus-epic-zoom-170">
+                    <td class="gallery-name"><a href="galleries/gallery6.html">Autumn Finale</a></td>
+                    <td class="gallery-date">October 28, 2024</td>
+                    <td class="gallery-description">Late autumn photography collection</td>
+                </tr>
+                <tr class="olympus-stylus-epic-zoom-170">
+                    <td class="gallery-name"><a href="galleries/gallery5.html">October Moments</a></td>
+                    <td class="gallery-date">October 9, 2024</td>
+                    <td class="gallery-description">Mid-autumn photography session</td>
+                </tr>
+                <tr class="olympus-stylus-epic-zoom-170">
+                    <td class="gallery-name"><a href="galleries/gallery4.html">Early Autumn</a></td>
+                    <td class="gallery-date">September 20, 2024</td>
+                    <td class="gallery-description">Beginning of fall season photography</td>
+                </tr>
+                <tr class="olympus-stylus-epic-zoom-170">
+                    <td class="gallery-name"><a href="galleries/gallery3.html">September Collection</a></td>
+                    <td class="gallery-date">September 4, 2024</td>
+                    <td class="gallery-description">Early September photo series</td>
+                </tr>
+                <tr class="olympus-stylus-epic-zoom-170">
+                    <td class="gallery-name"><a href="galleries/gallery2.html">Late Summer</a></td>
+                    <td class="gallery-date">August 18, 2024</td>
+                    <td class="gallery-description">End of summer photography collection</td>
+                </tr>
+                <tr class="olympus-stylus-epic-zoom-170">
+                    <td class="gallery-name"><a href="galleries/gallery1.html">Summer Beginnings</a></td>
+                    <td class="gallery-date">August 6, 2024</td>
+                    <td class="gallery-description">First gallery in the collection</td>
+                </tr>
+                <tr class="all">
+                    <td class="gallery-name"><a href="galleries/gallery_cat.html">Cat Photography</a></td>
+                    <td class="gallery-date">Special Collection</td>
+                    <td class="gallery-description">Dedicated collection of feline photography</td>
+                </tr>
+            </tbody>
+        </table>
 
         <div style="text-align: center; margin: 40px 0;">
             <p>Explore photos at random!<br>(every click shows something new)</p>
