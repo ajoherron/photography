@@ -102,17 +102,23 @@ ul, ol {
 }
 
 .support-button {
-    padding: 10px 25px;
-    font-size: 16px;
-    cursor: pointer;
-    background: #f8f8f8;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
     border: none;
-    border-radius: 8px;
-    transition: all 0.2s ease;
+    border-radius: 12px;
+    font-size: 1.5em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    margin: 10px;
 }
 
 .support-button:hover {
-    background: #eee;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
 }
 
 .support-button:active {
@@ -245,27 +251,6 @@ ul, ol {
     font-size: 0.95em;
 }
 
-/* Random button styling */
-.random-button {
-    padding: 15px 30px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 1.5em;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-    margin: 10px;
-}
-
-.random-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-}
-
 .random-image {
     max-width: 1000px;
     width: 100%;
@@ -329,4 +314,78 @@ Add all these to your `css/styles.css` file and the styling should come back!
 
 .support-section {
     text-align: center;
+}
+
+/* EXPERIMENTING WITH RANDOM BUTTON COLORS */
+
+/* Remove the background from base random-button class */
+.random-button {
+   padding: 15px 30px;
+   color: white;
+   border: none;
+   border-radius: 12px;
+   font-size: 1.5em;
+   font-weight: 600;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   margin: 10px;
+}
+
+/* First button - A little random (soft blue/green) */
+.random-button-1 {
+    background: linear-gradient(135deg, #3498DB 0%, #2ECC71 100%);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+}
+
+.random-button-1:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.6);
+    background: linear-gradient(135deg, #2ECC71 0%, #3498DB 100%);
+}
+
+/* Second button - Pretty random (yellow/orange) */
+.random-button-2 {
+   background: linear-gradient(135deg, #FFD93D 0%, #FF6B35 100%);
+   box-shadow: 0 4px 15px rgba(255, 217, 61, 0.4);
+}
+
+.random-button-2:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 217, 61, 0.6);
+    background: linear-gradient(135deg, #FF6B35 0%, #FFD93D 100%);
+    animation: medium-jitter 0.15s infinite;
+}
+
+@keyframes medium-jitter {
+    0% { transform: translateY(-2px) translateX(0px) rotate(0deg); }
+    25% { transform: translateY(-1px) translateX(-0.5px) rotate(0.5deg); }
+    50% { transform: translateY(-3px) translateX(0px) rotate(0deg); }
+    75% { transform: translateY(-1px) translateX(0.5px) rotate(-0.5deg); }
+    100% { transform: translateY(-2px) translateX(0px) rotate(0deg); }
+}
+
+/* Third button - Very random! (red/purple) */
+.random-button-3 {
+    background: linear-gradient(135deg, #E63946 0%, #8B0000 100%);
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
+}
+
+.random-button-3:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(230, 57, 70, 0.6);
+    animation: chaos-rainbow 0.3s infinite, see-saw 0.6s ease-in-out infinite;
+}
+
+@keyframes chaos-rainbow {
+    0% { background: linear-gradient(135deg, #E63946 0%, #8B0000 100%); }
+    25% { background: linear-gradient(135deg, #9B59B6 0%, #E91E63 100%); }
+    50% { background: linear-gradient(135deg, #FF5722 0%, #FFC107 100%); }
+    75% { background: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%); }
+    100% { background: linear-gradient(135deg, #E63946 0%, #8B0000 100%); }
+}
+
+@keyframes see-saw {
+    0% { transform: translateY(-2px) rotate(-3deg); }
+    50% { transform: translateY(-2px) rotate(3deg); }
+    100% { transform: translateY(-2px) rotate(-3deg); }
 }
