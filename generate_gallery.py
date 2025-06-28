@@ -3,10 +3,11 @@ import os
 ##############
 ### Update ###
 ##############
-GALLERY = "gallery17" # E.g., gallery15
-DATE = "6/25/2025" # E.g., 4/27/2025
-FILM = "Kodak Portra 400 (35mm)" # E.g., Kodak UltraMax 400 (35mm)
-CAMERA = "Olympus Stylus Epic Zoom 170" # E.g., Canon AE-1 Program or Olympus Stylus Epic Zoom 170
+GALLERY = "gallery17"  # E.g., gallery15
+DATE = "6/25/2025"  # E.g., 4/27/2025
+FILM = "Kodak Portra 400 (35mm)"  # E.g., Kodak UltraMax 400 (35mm)
+CAMERA = "Olympus Stylus Epic Zoom 170"  # E.g., Canon AE-1 Program or Olympus Stylus Epic Zoom 170
+
 
 def generate_html(gallery, date, film, camera):
     # HTML header
@@ -69,13 +70,16 @@ def generate_html(gallery, date, film, camera):
         f.write(html)
 
 
-if __name__ == ""__main__":
-
+if __name__ == "__main__":
     # Run the function to generate the HTML
     generate_html(GALLERY, DATE, FILM, CAMERA)
-    print(f"Generated HTML for {GALLERY} with date {DATE}, film {FILM}, and camera {CAMERA}.")
+    print(
+        f"Generated HTML for {GALLERY} with date {DATE}, film {FILM}, and camera {CAMERA}."
+    )
 
-    # Auto-update random images
+    # Import random generator
     from generate_random_image_js import generate_random_image_js
+
+    # Run random generator to update the random image selection
     generate_random_image_js()
     print("Random image selection updated with new gallery.")
