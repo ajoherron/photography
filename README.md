@@ -23,3 +23,15 @@
 - This will also run generate_random_image_js.py, which updates the random image list with the new gallery
 
 5. Push changes
+
+### Notes on testing for web development
+
+- Use localhost for testing
+
+```bash
+cd photography
+python -m http.server 8000
+```
+
+- Visit http://localhost:8000
+- Hard refresh after changes (Cmd + Shift + R)
