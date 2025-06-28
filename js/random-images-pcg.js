@@ -69,7 +69,7 @@ function updateDisplay(randomSelection, algorithmName) {
     
     document.getElementById('randomImage').src = imagePath;
     document.getElementById('randomImage').alt = randomSelection.image;
-    document.getElementById('imageInfo').textContent = `${randomSelection.image} from ${randomSelection.gallery} (${algorithmName})`;
+    document.getElementById('imageInfo').textContent = `${randomSelection.image} from ${randomSelection.gallery}`;
     document.getElementById('galleryLink').href = galleryPath;
     document.getElementById('randomImageContainer').style.display = 'block';
 }

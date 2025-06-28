@@ -268,9 +268,9 @@ ul, ol {
 
 .random-footnotes {
     margin-top: 20px;
+    margin-bottom: 30px;
 }
 
-Add all these to your `css/styles.css` file and the styling should come back!
 .random-section {
     text-align: center;
     margin: 40px 0;
