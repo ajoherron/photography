@@ -4,249 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ajoherron photography</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        header {
-            margin-bottom: 40px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
-        }
-
-        h1 {
-            margin: 0;
-            font-weight: 300;
-            font-size: 2.5rem;
-        }
-
-        h1 a {
-            color: #333;
-            text-decoration: none;
-        }
-
-        h1 a:hover {
-            color: #666;
-        }
-
-        .gallery-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 40px;
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .gallery-table th {
-            background: #f8f8f8;
-            padding: 15px;
-            text-align: left;
-            font-weight: 600;
-            border-bottom: 2px solid #eee;
-        }
-
-        .gallery-table td {
-            padding: 15px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .gallery-table tr:hover {
-            background: #f9f9f9;
-        }
-
-        .gallery-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        /* Camera color coding */
-        .canon-ae-1 {
-            border-left: 4px solid #4A90E2;
-            background: rgba(74, 144, 226, 0.05);
-        }
-
-        .canon-ae-1:hover {
-            background: rgba(74, 144, 226, 0.1);
-        }
-
-        .olympus-stylus-epic-zoom-170 {
-            border-left: 4px solid #7ED321;
-            background: rgba(126, 211, 33, 0.05);
-        }
-
-        .olympus-stylus-epic-zoom-170:hover {
-            background: rgba(126, 211, 33, 0.1);
-        }
-
-        .all {
-            border-left: 4px solid #F5A623;
-            background: rgba(245, 166, 35, 0.05);
-        }
-
-        .all:hover {
-            background: rgba(245, 166, 35, 0.1);
-        }
-
-        /* Camera key styling */
-        .camera-key {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            border: 1px solid #eee;
-        }
-
-        .camera-key h3 {
-            margin: 0 0 10px 0;
-            font-size: 1.1em;
-            color: #333;
-        }
-
-        .key-items {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .key-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .key-color {
-            width: 20px;
-            height: 20px;
-            border-radius: 3px;
-            border: 1px solid #ddd;
-        }
-
-        .canon-ae-1-key {
-            background: #4A90E2;
-        }
-
-        .olympus-stylus-epic-zoom-170-key {
-            background: #7ED321;
-        }
-
-        .all-key {
-            background: #F5A623;
-        }
-
-        .gallery-name {
-            font-weight: 500;
-        }
-
-        .gallery-name a {
-            color: #333;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .gallery-name a:hover {
-            color: #667eea;
-        }
-
-        .gallery-date {
-            color: #666;
-            font-size: 0.9em;
-        }
-
-        .gallery-description {
-            color: #777;
-            font-size: 0.95em;
-        }
-
-        .special-categories {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-
-        .collection-link {
-            display: block;
-            padding: 15px;
-            background: #f8f8f8;
-            text-decoration: none;
-            color: #333;
-            border-radius: 8px;
-            transition: background-color 0.2s;
-        }
-
-        .collection-link:hover {
-            background: #eee;
-        }
-
-        .featured-image {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            margin-top: 40px;
-        }
-
-        .counter-button {
-            display: block;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            margin: 40px auto;
-            background: #f8f8f8;
-            border: none;
-            border-radius: 8px;
-            transition: background-color 0.2s;
-        }
-
-        .counter-button:hover {
-            background: #eee;
-        }
-
-        .random-button, .support-button {
-            padding: 15px 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            font-size: 1.5em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-            margin: 10px;
-        }
-
-        .random-button:hover, .support-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-        }
-
-        .random-image {
-            max-width: 1000px;
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        /* Responsive design for mobile */
-        @media (max-width: 768px) {
-            .gallery-table {
-                font-size: 0.9em;
-            }
-            
-            .gallery-table th,
-            .gallery-table td {
-                padding: 10px 8px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
@@ -393,48 +151,44 @@
             </tbody>
         </table>
 
-        <div style="text-align: center; margin: 40px 0;">
+        <div class="random-section">
             <p>
-            <span style="font-size: 32px;">Explore photos at random!</span><br>
-            <span style="font-size: 16px;">(every click shows something new)</span>
+                <span class="random-intro-main">Explore photos at random!</span><br>
+                <span class="random-intro-sub">(every click shows something new)</span>
             </p>
 
-            <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+            <div class="random-buttons">
                 <button onclick="showRandomImage()" class="random-button">
-                    A little random
+                    A little random*
                 </button>
                 <button onclick="showRandomImagePCG()" class="random-button">
-                    Pretty random
+                    Pretty random**
                 </button>
                 <button onclick="showRandomImageMersenne()" class="random-button">
-                    Very random!
+                    Very random!***
                 </button>
             </div>
 
-            <p>
-            <span style="font-size: 14px; color: #888;">* <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random" target="_blank" style="color: #667eea;">Math.random() Javascript method</a></span><br>
-            <span style="font-size: 14px; color: #888;">** <a href="https://en.wikipedia.org/wiki/Permuted_congruential_generator" target="_blank" style="color: #667eea;">Permuted Congruential Generator</a></span><br>
-            <span style="font-size: 14px; color: #888;">*** <a href="https://en.wikipedia.org/wiki/Mersenne_Twister" target="_blank" style="color: #667eea;">Mersenne Twister</a></span><br>
-            </p>
+            <div class="random-footnotes">
+                <span class="footnote">* <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random" target="_blank">Math.random() Javascript method</a></span>
+                <span class="footnote">** <a href="https://en.wikipedia.org/wiki/Permuted_congruential_generator" target="_blank">Permuted Congruential Generator</a></span>
+                <span class="footnote">*** <a href="https://en.wikipedia.org/wiki/Mersenne_Twister" target="_blank">Mersenne Twister</a></span>
+            </div>
 
-            <div class="random-image-container" id="randomImageContainer" style="display: none; margin-top: 20px;">
+            <div class="random-image-container" id="randomImageContainer">
                 <img id="randomImage" class="random-image" src="" alt="">
-                <div id="imageInfo" style="margin: 10px 0; color: #666; font-size: 14px;"></div>
+                <div id="imageInfo" class="image-info"></div>
                 <div>
-                    <a id="galleryLink" href="" style="color: #333; text-decoration: none;">
+                    <a id="galleryLink" class="gallery-link">
                         View Full Gallery →
                     </a>
                 </div>
             </div>
         </div>
 
-        <img 
-            src="images/gallery11/cradle.jpg" 
-            alt="cradle" 
-            class="featured-image"
-        >
+        <img src="images/gallery11/cradle.jpg" alt="cradle" class="featured-image">
 
-        <div style="text-align: center;">
+        <div class="support-section">
             <p>Please support ajoherron photography by pressing this button<br>(every press helps)</p>
             <button onclick="animateButton(this)" class="support-button">
                 Support
@@ -447,7 +201,6 @@
                 setTimeout(() => button.style.transform = 'scale(1)', 200);
             }
         </script>
-
     </main>
 
     <!-- Random Image generation scripts -->
