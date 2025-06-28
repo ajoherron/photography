@@ -69,5 +69,13 @@ def generate_html(gallery, date, film, camera):
         f.write(html)
 
 
-# Run the function to generate the HTML
-generate_html(GALLERY, DATE, FILM, CAMERA)
+if __name__ == ""__main__":
+
+    # Run the function to generate the HTML
+    generate_html(GALLERY, DATE, FILM, CAMERA)
+    print(f"Generated HTML for {GALLERY} with date {DATE}, film {FILM}, and camera {CAMERA}.")
+
+    # Auto-update random images
+    from generate_random_image_js import generate_random_image_js
+    generate_random_image_js()
+    print("Random image selection updated with new gallery.")

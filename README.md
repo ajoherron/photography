@@ -20,9 +20,6 @@
 4. Update inputs for generate_gallery.py (then run script)
 
 - Including gallery, date, film, and camera
+- This will also run generate_random_image_js.py, which updates the random image list with the new gallery
 
-5. Run generate_random_image_js.py
-
-- This will run generate_random_image_js.py, which will update the random image list
-
-6. Push changes
+5. Push changes
