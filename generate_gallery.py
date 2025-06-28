@@ -78,8 +78,8 @@ if __name__ == "__main__":
     )
 
     # Import random generator
-    from generate_random_image_js import generate_random_image_js
+    from generate_random_image_json import generate_random_image_json
 
     # Run random generator to update the random image selection
-    generate_random_image_js()
+    generate_random_image_json()
     print("Random image selection updated with new gallery.")

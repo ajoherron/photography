@@ -394,11 +394,29 @@
         </table>
 
         <div style="text-align: center; margin: 40px 0;">
-            <p>Explore photos at random!<br>(every click shows something new)</p>
-            <button onclick="showRandomImage()" class="random-button">
-                Random Image Generator
-            </button>
-            
+            <p>
+            <span style="font-size: 32px;">Explore photos at random!</span><br>
+            <span style="font-size: 16px;">(every click shows something new)</span>
+            </p>
+
+            <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                <button onclick="showRandomImage()" class="random-button">
+                    A little random
+                </button>
+                <button onclick="showRandomImagePCG()" class="random-button">
+                    Pretty random
+                </button>
+                <button onclick="showRandomImageMersenne()" class="random-button">
+                    Very random!
+                </button>
+            </div>
+
+            <p>
+            <span style="font-size: 14px; color: #888;">* <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random" target="_blank" style="color: #667eea;">Math.random() Javascript method</a></span><br>
+            <span style="font-size: 14px; color: #888;">** <a href="https://en.wikipedia.org/wiki/Permuted_congruential_generator" target="_blank" style="color: #667eea;">Permuted Congruential Generator</a></span><br>
+            <span style="font-size: 14px; color: #888;">*** <a href="https://en.wikipedia.org/wiki/Mersenne_Twister" target="_blank" style="color: #667eea;">Mersenne Twister</a></span><br>
+            </p>
+
             <div class="random-image-container" id="randomImageContainer" style="display: none; margin-top: 20px;">
                 <img id="randomImage" class="random-image" src="" alt="">
                 <div id="imageInfo" style="margin: 10px 0; color: #666; font-size: 14px;"></div>
@@ -410,13 +428,19 @@
             </div>
         </div>
 
+        <img 
+            src="images/gallery11/cradle.jpg" 
+            alt="cradle" 
+            class="featured-image"
+        >
+
         <div style="text-align: center;">
             <p>Please support ajoherron photography by pressing this button<br>(every press helps)</p>
             <button onclick="animateButton(this)" class="support-button">
                 Support
             </button>
         </div>
-        
+
         <script>
             function animateButton(button) {
                 button.style.transform = 'scale(1.2)';
@@ -424,13 +448,11 @@
             }
         </script>
 
-        <img 
-            src="images/gallery11/cradle.jpg" 
-            alt="cradle" 
-            class="featured-image"
-        >
     </main>
 
+    <!-- Random Image generation scripts -->
     <script src="js/random-images.js"></script>
+    <script src="js/random-images-pcg.js"></script>
+    <script src="js/random-images-mersenne.js"></script>
 </body>
 </html>
