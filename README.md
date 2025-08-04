@@ -22,7 +22,11 @@
 - Including gallery, date, film, and camera
 - This will also run generate_random_image_js.py, which updates the random image list with the new gallery
 
-5. Push changes
+5. Update index.html
+
+- Add a new entry for each additional roll added
+
+6. Push changes
 
 ### Notes on testing for web development
 
