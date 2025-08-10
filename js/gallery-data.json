@@ -136,6 +136,23 @@
     "sunburst",
     "tunnel"
   ],
+  "gallery19": [
+    "bee",
+    "block",
+    "bus",
+    "chipmunk",
+    "dock",
+    "focus",
+    "glisten",
+    "lock",
+    "newbury",
+    "pink",
+    "sailboat",
+    "shiny",
+    "smooth",
+    "tracks",
+    "wake"
+  ],
   "gallery2": [
     "arches",
     "bench",
@@ -262,7 +279,9 @@
     "box",
     "cleaning",
     "closet",
+    "content",
     "couch",
+    "curious",
     "feisty",
     "fierce",
     "floor",

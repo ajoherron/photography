@@ -39,3 +39,7 @@ python -m http.server 8000
 
 - Visit http://localhost:8000
 - Hard refresh after changes (Cmd + Shift + R)
+
+### Notes for backup storage ###
+
+- Periodically upload zip files to Google Drive
