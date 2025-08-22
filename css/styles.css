@@ -186,6 +186,15 @@ ul, ol {
     background: rgba(126, 211, 33, 0.1);
 }
 
+.nikon-photomic-ftn {
+    border-left: 4px solid #FFD700;
+    background: rgba(255, 215, 0, 0.08);
+}
+
+.nikon-photomic-ftn:hover {
+    background: rgba(255, 215, 0, 0.15);
+}
+
 .all {
     border-left: 4px solid #F5A623;
     background: rgba(245, 166, 35, 0.05);
@@ -235,6 +244,10 @@ ul, ol {
 
 .olympus-stylus-epic-zoom-170-key {
     background: #7ED321;
+}
+
+.nikon-photomic-ftn-key {
+    background: #FFD700;
 }
 
 .all-key {

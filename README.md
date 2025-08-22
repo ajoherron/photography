@@ -17,12 +17,12 @@
 - Generally sticking with one-word names
 - Keep it simple, not worth overthinking it
 
-4. Update inputs for generate_gallery.py (then run script)
+4. Update inputs for `generate_gallery.py` (then run script)
 
 - Including gallery, date, film, and camera
 - This will also run generate_random_image_js.py, which updates the random image list with the new gallery
 
-5. Update index.html
+5. Update `index.html`
 
 - Add a new entry for each additional roll added
 
