@@ -3,10 +3,10 @@ import os
 ##############
 ### Update ###
 ##############
-GALLERY = "gallery20"  # E.g., gallery15
-DATE = "8/19/2025"  # E.g., 4/27/2025
-FILM = "Ilford Ilfocolor 400 (35mm)"  # E.g., Kodak UltraMax 400 (35mm)
-CAMERA = "Nikon Photomic FTn"  # E.g., Canon AE-1 Program, Olympus Stylus Epic Zoom 170, Nikon Photomic FTn
+GALLERY = "gallery21"  # E.g., gallery15
+DATE = "9/25/2025"  # E.g., 4/27/2025
+FILM = "Kodak Portra 160 (35mm)"  # E.g., Kodak UltraMax 400 (35mm)
+CAMERA = "Canon AE-1 Program"  # E.g., Canon AE-1 Program, Olympus Stylus Epic Zoom 170, Nikon Photomic FTn
 
 
 def generate_html(gallery, date, film, camera):
