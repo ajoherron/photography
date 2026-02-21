@@ -3,9 +3,9 @@ import os
 ##############
 ### Update ###
 ##############
-GALLERY = "gallery26"  # E.g., gallery15
-DATE = "11/28/2025"  # E.g., 4/27/2025
-FILM = "Lomography LomoChrome Purple (35mm)"  # E.g., Kodak UltraMax 400 (35mm)
+GALLERY = "gallery28"  # E.g., gallery15
+DATE = "2/11/2025"  # E.g., 4/27/2025
+FILM = "Lomography Metropolis 400 (35mm)"  # E.g., Kodak UltraMax 400 (35mm)
 CAMERA = "Canon AE-1 Program"  # E.g., Canon AE-1 Program, Olympus Stylus Epic Zoom 170, Nikon Photomic FTn
 
 
