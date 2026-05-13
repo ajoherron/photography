@@ -43,3 +43,13 @@ python -m http.server 8000
 ### Notes for backup storage ###
 
 - Periodically upload zip files to Google Drive
+
+### Uploading new rolls with Claude
+
+Use `upload_roll.py` via Claude to automate the upload process.
+
+**Stage 1** — give Claude the keeper frame numbers, gallery numbers, dates, film, camera, descriptions, and locations. Claude calls `setup()`, which copies frames from Full Rolls → Keepers → `images/galleryN/`.
+
+**Stage 2** — name the images in Finder, then tell Claude you're done. Claude calls `finalize()`, which generates gallery HTML, updates the random image list, and updates `index.html`.
+
+Push changes manually when done.
