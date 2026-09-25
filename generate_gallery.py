@@ -3,8 +3,8 @@ import os
 ##############
 ### Update ###
 ##############
-GALLERY = "gallery31"  # E.g., gallery15
-DATE = "6/12/2026"  # E.g., 4/27/2025
+GALLERY = "gallery32"  # E.g., gallery15
+DATE = "9/23/2026"  # E.g., 4/27/2025
 FILM = "Kodak Portra 160 (35mm)"  # E.g., Kodak UltraMax 400 (35mm)
 CAMERA = "Canon AE-1 Program"  # E.g., Canon AE-1 Program, Olympus Stylus Epic Zoom 170, Nikon Photomic FTn
 
