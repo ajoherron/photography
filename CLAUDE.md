@@ -13,6 +13,7 @@ photography/          ← this repo (served at ajoherron.github.io)
     gallery1.html … galleryN.html
   js/
     gallery-data.json        ← auto-generated, do not edit
+  Makefile                   ← make serve / make gallery / make random
   generate_gallery.py        ← generates gallery HTML + calls random image updater
   generate_random_image_json.py
   index.html                 ← main table of all galleries
@@ -34,7 +35,7 @@ Film/
 3. **Create gallery folder** — `images/galleryN/` where N is next in sequence
 4. **Copy from Keepers → images/galleryN/** — copy the keeper files
 5. **Name the images** — rename .jpg files to one-word descriptive names (human step)
-6. **Generate gallery HTML** — run `generate_gallery.py` (see below)
+6. **Generate gallery HTML** — `make gallery` (see below)
 7. **Update index.html** — add a new `<tr>` at the top of `<tbody>` (see format below)
 8. **Push** — standard git commit and push
 
@@ -46,7 +47,7 @@ Scanned files within each folder have a unique numeric prefix per roll (e.g. `00
 
 ## Adding new rolls with upload_roll.py
 
-Use `upload_roll.py` for all new uploads — never edit `generate_gallery.py` variables directly. The script never commits or pushes.
+Claude uses `upload_roll.py` for new uploads rather than editing `generate_gallery.py` variables (those are for manual `make gallery` runs). The script never commits or pushes.
 
 ### Stage 1 — setup
 
@@ -110,7 +111,7 @@ New rows go at the top of `<tbody>`. Match the camera CSS class to the camera us
 ## Local preview
 
 ```
-cd photography && python3 -m http.server 8000
+make serve
 ```
 
-Must run from `photography/`, not from the parent `Film/` directory.
+Serves `photography/` at http://localhost:8000 regardless of where `make -C` is called from.
