@@ -360,6 +360,22 @@
     "singles",
     "yellow"
   ],
+  "gallery33": [
+    "blocked",
+    "boathouse",
+    "bright",
+    "burning",
+    "canopy",
+    "champs",
+    "charles",
+    "flares",
+    "glassy",
+    "glowing",
+    "kayak",
+    "lookout",
+    "mesh",
+    "reflect"
+  ],
   "gallery4": [
     "clouds",
     "columns",
@@ -456,6 +472,7 @@
   ],
   "gallery_cat": [
     "backbiscuits",
+    "basking",
     "blueberries",
     "bookshelf",
     "box",
